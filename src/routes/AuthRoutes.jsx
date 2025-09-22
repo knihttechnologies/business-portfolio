@@ -14,7 +14,7 @@ import Footer from '../components/Footer';
 
 const AuthRoutes = () => {
   return (
-    <Router>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Navigate replace to="/home" />} />
@@ -26,7 +26,7 @@ const AuthRoutes = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 

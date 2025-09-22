@@ -33,40 +33,40 @@ const Contact = ({ isSummary = false }) => {
         Get in touch with us for a consultation or to learn more about our services.
       </motion.p>
       
-      <div className="grid md:grid-cols-2 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         {/* Contact Form */}
         <div>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4 w-full">
             <input
               type="text"
               name="name"
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 border rounded-sm"
+              className="w-full p-2 sm:p-3 border rounded-md text-sm sm:text-base"
               required
             />
             <input
               type="email"
               name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full p-3 border rounded-sm"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="4"
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full p-3 border rounded-sm"
-              required
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-blue-600 text-white p-3 rounded-sm hover:bg-blue-700 transition-colors"
+              placeholder="Your Email"/>
+              {/* Contact Info */}
+              <div className="space-y-2 bg-gray-100 dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-sky-200 dark:border-sky-700">
+                <div className="flex items-center mb-2">
+                  <MapPin size={20} className="mr-2 text-sky-500" />
+                  <p className="text-gray-700 dark:text-gray-300">123 Tech Lane, Innovation City, 45678</p>
+                </div>
+                <div className="flex items-center mb-2">
+                  <Phone size={20} className="mr-2 text-sky-500" />
+                  <p className="text-gray-700 dark:text-gray-300">+1 (555) 123-4567</p>
+                </div>
+                <div className="flex items-center">
+                  <Mail size={20} className="mr-2 text-sky-500" />
+                  <p className="text-gray-700 dark:text-gray-300">info@knihttechnologies.com</p>
+                </div>
+              </div>
+             <button type="submit"
+              className="bg-blue-600 text-white p-2 sm:p-3 rounded-md hover:bg-blue-700 transition-colors text-sm sm:text-base"
             >
               Send Message
             </button>
@@ -113,7 +113,7 @@ const Contact = ({ isSummary = false }) => {
 
   return (
     <PagesLayout>
-      <div className="container mx-auto px-4">{content}</div>
+      <div className="container mx-auto px-4 mt-20 dark:bg-gray-900 bg-gray-50 min-h-[calc(100vh-5rem)]">{content}</div>
     </PagesLayout>
   );
 }

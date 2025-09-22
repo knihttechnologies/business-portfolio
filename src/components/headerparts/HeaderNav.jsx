@@ -12,7 +12,7 @@ const scrollToAnchor = (anchor) => {
 
 const HeaderNav = ({ style, navigate }) => {
   const handleNav = (link) => {
-    if (window.location.pathname === '/home' && link.anchor) {
+    if (window.location.pathname === '/' && link.anchor) {
       scrollToAnchor(link.anchor);
     } else {
       navigate(link.path);
@@ -20,7 +20,7 @@ const HeaderNav = ({ style, navigate }) => {
   };
 
   return (
-    <motion.header {...style.headerProps}>
+  <motion.header {...style.headerProps} className={style.headerProps.className + ' dark:bg-gray-900/90 dark:text-gray-100'}>
       {/* Conditionally render Logo based on Animated Entry style */}
       {style.label === 'Animated Entry' ? (
         <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ delay: 0.3 }} className={style.logoClassName}>
@@ -30,7 +30,7 @@ const HeaderNav = ({ style, navigate }) => {
         <Logo className={style.logoClassName} />
       )}
       
-      <nav className="flex gap-8">
+  <nav className="flex flex-wrap gap-4 md:gap-8 items-center justify-center md:justify-end text-sm md:text-base">
         {homeNavLinks.map((link, i) => (
           <motion.button
             key={link.name}
