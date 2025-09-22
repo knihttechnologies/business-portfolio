@@ -11,8 +11,10 @@ import Contact from '../pages/Contact';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useDarkMode } from '../context/DarkModeContext';
 
 const AuthRoutes = () => {
+  const {isDark} = useDarkMode();
   return (
     <>
       <Header />
@@ -25,7 +27,7 @@ const AuthRoutes = () => {
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
+      <Footer isDark={isDark}/>
     </>
   );
 }

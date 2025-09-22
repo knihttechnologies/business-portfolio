@@ -9,7 +9,7 @@ export const HomeLayout = ({ children}) => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      className={`min-h-screen mt-[70px] text-white`}
+      className={`mt-[50px]`}
     >
       {children}
     </motion.div>

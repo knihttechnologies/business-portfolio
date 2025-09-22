@@ -29,10 +29,10 @@ const Services = () => {
   ];
   return (
     <PagesLayout>
-      <div className="container mx-auto px-4 mt-20 dark:bg-gray-900 bg-gray-50 min-h-[calc(100vh-5rem)]">
+      <div className="container mx-auto px-4 min-h-[calc(100vh-5rem)]">
         <h2 className="text-3xl font-bold mb-4">Our Services</h2>
         <p className="text-lg mb-8">Kniht Technologies offers a range of services to help your business thrive in the digital age.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-4 gap-6 mb-12">
           {/* Service Cards */}
               {services.map((service, idx) => (
                 <motion.div

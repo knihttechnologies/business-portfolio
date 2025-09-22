@@ -33,7 +33,7 @@ const Contact = ({ isSummary = false }) => {
         Get in touch with us for a consultation or to learn more about our services.
       </motion.p>
       
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         {/* Contact Form */}
         <div>
           <form onSubmit={handleSubmit} className="space-y-4 w-full">
@@ -51,7 +51,7 @@ const Contact = ({ isSummary = false }) => {
               name="email"
               placeholder="Your Email"/>
               {/* Contact Info */}
-              <div className="space-y-2 bg-gray-100 dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-sky-200 dark:border-sky-700">
+              <div className="space-y-2 rounded-xl p-4 shadow-lg border border-sky-200 dark:border-sky-700">
                 <div className="flex items-center mb-2">
                   <MapPin size={20} className="mr-2 text-sky-500" />
                   <p className="text-gray-700 dark:text-gray-300">123 Tech Lane, Innovation City, 45678</p>
@@ -113,7 +113,9 @@ const Contact = ({ isSummary = false }) => {
 
   return (
     <PagesLayout>
-      <div className="container mx-auto px-4 mt-20 dark:bg-gray-900 bg-gray-50 min-h-[calc(100vh-5rem)]">{content}</div>
+      <div className="container mx-auto px-4 mt-20 min-h-[calc(100vh-5rem)]">
+        {content}
+      </div>
     </PagesLayout>
   );
 }

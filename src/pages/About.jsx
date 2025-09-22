@@ -6,7 +6,7 @@ import { PagesLayout } from '../layouts/Layout';
 const About = ({ isSummary = false }) => {
 
   const content = (
-    <div className={`${isSummary ? 'dark:text-black text-white' : '' }`}>
+    <div className={``}>
       <h2 className={`text-3xl font-bold mb-4 ${isSummary ? '' : '' }`}>About Kniht Technologies</h2>
       <motion.p
         initial={{ y: 20, opacity: 0 }}
@@ -55,7 +55,7 @@ const About = ({ isSummary = false }) => {
   return (
     <PagesLayout>
       <motion.section
-        className={`mt-20 px-2 sm:px-4 ${isSummary ? '' : 'dark:bg-gray-900 bg-gray-50'} min-h-[calc(100vh-5rem)]`}
+        className={`mt-20 px-2 sm:px-4 min-h-[calc(100vh-5rem)]`}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

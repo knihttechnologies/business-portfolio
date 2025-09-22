@@ -7,7 +7,7 @@ import { PagesLayout } from '../layouts/Layout';
 const Portfolio = () => {
   return (
     <PagesLayout>
-      <div className="container mx-auto px-4 mt-20 dark:bg-gray-900 bg-gray-50 min-h-[calc(100vh-5rem)]">
+      <div className="container mx-auto px-4 min-h-[calc(100vh-2rem)]">
         <h2 className="text-3xl font-bold mb-4">Our Portfolio</h2>
         <p className="text-lg mb-8">Explore some of our recent projects and collaborations.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8">

@@ -3,9 +3,11 @@ import { SocialIcon } from 'react-social-icons/component'
 import 'react-social-icons/github'
 import 'react-social-icons/x'
 import 'react-social-icons/linkedin'
-const Footer = () => {
+import { generalDarkBgColor, generalLightBgColor } from '../assets/constants/colors';
+
+const Footer = ({ isDark }) => {
   return (
-    <footer className="bg-gradient-to-r from-gray-700 via-blue-400 to-gray-400 text-white py-10 px-4 mt-16 dark:bg-gray-900/90 dark:text-gray-100">
+    <footer className={`rounded-md ${ isDark ? `${generalDarkBgColor}` : `${generalLightBgColor}` }  text-black py-10 px-4 mt-16 dark:text-gray-100`}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-xl sm:text-2xl font-bold mb-2">KNIHT Technologies</h3>

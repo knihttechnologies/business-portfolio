@@ -7,7 +7,7 @@ import { PagesLayout }from '../layouts/Layout';
 const News = () => {
   return (
     <PagesLayout>
-      <div className="container mx-auto px-4 mt-20 dark:bg-gray-900 bg-gray-50 min-h-[calc(100vh-5rem)]">
+      <div className="container mx-auto px-4 min-h-[calc(100vh-5rem)]">
         <h2 className="text-3xl font-bold mb-4">Latest News</h2>
         <p className="text-lg mb-8">Stay updated with our latest announcements and events.</p>
         {/* Blog Section with Dummy Data */}
@@ -26,7 +26,7 @@ const News = () => {
         <div className="bg-white/10 rounded-xl shadow-lg p-6 flex flex-col items-center">
           <span className="text-lg font-bold mb-2">Analytics & Ads</span>
           <p className="text-sm text-center mb-2">This section is ready for Google Analytics and Adsense integration. Add your tracking and ad code here.</p>
-          <div className="w-full h-24 bg-gray-200 flex items-center justify-center rounded-lg">Ad Placeholder</div>
+          <div className="w-full h-24 shadow-md shadow-cyan-800 flex items-center justify-center rounded-lg">Ad Placeholder</div>
         </div>
       </div>
     </PagesLayout>
