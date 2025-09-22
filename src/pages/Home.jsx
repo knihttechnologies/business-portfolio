@@ -7,10 +7,14 @@ import Portfolio from '../pages/Portfolio';
 import News from '../pages/News';
 import Contact from '../pages/Contact';
 import { HomeLayout } from '../layouts/Layout';
+import HomeSlider from '../components/homeparts/HomeSlider';
 
 const Home = () => {
   return (
     <HomeLayout>
+      <div className="w-full flex justify-center mb-8">
+        <HomeSlider />
+      </div>
       <HomeHero />
       <HomeSectionWrapper id="about" >
         <About isSummary={true} />
