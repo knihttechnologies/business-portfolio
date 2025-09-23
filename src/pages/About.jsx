@@ -6,7 +6,7 @@ import { Content} from '../assets/constants/companycontent';
 const About = ({ isSummary = false }) => {
   return (
     <motion.section
-      className={`mt-20 px-2 sm:px-4 min-h-[calc(100vh-5rem)]`}
+      className={`pt-20 px-2 sm:px-4 min-h-[calc(100vh-5rem)]`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

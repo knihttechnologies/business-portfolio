@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 //pages
 import Home from '../pages/Home';
@@ -30,13 +30,17 @@ const AuthRoutes = () => {
         <Route path="/contact" element={<Contact />} />
       </Route>
       {/* Admin/protected routes NOT wrapped in Layout, only Container (which uses AdminLayout) */}
+      {/* Private routes for different roles */}
       {ROLE_ROUTES.map(({ path, role }) => (
-        <Route key={path} element={<PrivateRoute role={role} />}>
-          <Route
-            path={path}
-            element={<Container role={user?.role} name={user?.name} />}
-          />
-        </Route>
+        <Route
+          key={path}
+          path={path}
+          element={
+            <PrivateRoute role={role}>
+              <Container role={user?.role} name={user?.name} />
+            </PrivateRoute>
+          }
+        />
       ))}
       {/* Catch all route */}
       {/* <Route path="*" element={<Navigate replace to="/home" />} /> */}

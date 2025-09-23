@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AdminNav from '../components/adminparts/AdminNav';
 import AdminSideNav from '../components/adminparts/AdminSideNav';
+import { Outlet } from 'react-router-dom';
 
 export const Layout = ({ children }) => {
   const {isDark} = useDarkMode();
@@ -33,7 +34,9 @@ export const Layout = ({ children }) => {
     <>
       <Header />
       <motion.div as={containerType} {...motionProps}>
-        {children}
+        {/* Render children if directly used, otherwise render nested route content */}
+        {/* {children} */}
+        <Outlet />
       </motion.div>
       <Footer isDark={isDark}/>
     </>

@@ -112,7 +112,7 @@ const Contact = ({ isSummary = false }) => {
   );
 
   return (
-    <div className="container mx-auto px-4 mt-20 min-h-[calc(100vh-5rem)]">
+    <div className="container mx-auto px-4 pt-20 min-h-[calc(100vh-5rem)]">
       {content}
     </div>
   );

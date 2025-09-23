@@ -23,6 +23,8 @@ export const HomeHeaderNav = ({ style, navigate, heading='Kniht' }) => {
             scrollToAnchor(link.anchor);
         } else {
             navigate(link.path);
+            setMobileMenuOpen(false);
+            return
         }
     };
 
@@ -92,7 +94,7 @@ export const HomeHeaderNav = ({ style, navigate, heading='Kniht' }) => {
                         <div className="flex justify-between w-full sm:ml-4 items-center">
                             <h3 className="text-xl sm:text-xs font-bold">{heading}</h3>
                             <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
-                            <XCircle className="w-6 h-6" />
+                                <XCircle className="w-6 h-6" />
                             </button>
                         </div>
                         <hr className="border-2 w-full mt-5 mb-5  border-green-500 my-2" />
