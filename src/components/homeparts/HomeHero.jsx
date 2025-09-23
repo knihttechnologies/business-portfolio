@@ -12,7 +12,9 @@ const HomeHero = () => {
             className="flex flex-col md:flex-row gap-4 mb-8 w-full"
         >
             <Sparkle size={48} className="text-sky-800 text-center animate-pulse" />
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg text-center w-full">Welcome to Kniht Technologies</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-black dark:text-white drop-shadow-lg text-center w-full">
+                Welcome to Kniht Technologies
+            </h1>
         </motion.div>
         <motion.p
             initial={{ opacity: 0 }}
@@ -27,7 +29,7 @@ const HomeHero = () => {
             animate={{ y: 20, opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
         >
-            <ArrowDownCircle size={40} className="text-black animate-bounce" />
+            <ArrowDownCircle size={40} className="text-black dark:text-white animate-bounce" />
         </motion.div>
     </div>
   );

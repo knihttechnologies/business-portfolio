@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { PagesLayout } from '../layouts/Layout';
+// import { Layout } from '../layouts/Layout';
 
 const Contact = ({ isSummary = false }) => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -112,11 +112,9 @@ const Contact = ({ isSummary = false }) => {
   );
 
   return (
-    <PagesLayout>
-      <div className="container mx-auto px-4 mt-20 min-h-[calc(100vh-5rem)]">
-        {content}
-      </div>
-    </PagesLayout>
+    <div className="container mx-auto px-4 mt-20 min-h-[calc(100vh-5rem)]">
+      {content}
+    </div>
   );
 }
 

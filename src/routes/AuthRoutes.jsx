@@ -9,16 +9,18 @@ import Portfolio from '../pages/Portfolio';
 import News from '../pages/News';
 import Contact from '../pages/Contact';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { useDarkMode } from '../context/DarkModeContext';
+import PrivateRoute from '../api/PrivateRoute';
+import { ROLE_ROUTES } from '../assets/constants/routes';
+import Container from '../pages/dashboards/Container';
+import { Layout } from '../layouts/Layout';
 
 const AuthRoutes = () => {
-  const {isDark} = useDarkMode();
+  const user = {role: 'Admin', name: 'John Doe'}; // Mock user data, replace with actual auth context
+  
   return (
-    <>
-      <Header />
-      <Routes>
+    <Routes>
+      {/* Public routes wrapped in Layout */}
+      <Route element={<Layout />}>
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -26,9 +28,19 @@ const AuthRoutes = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer isDark={isDark}/>
-    </>
+      </Route>
+      {/* Admin/protected routes NOT wrapped in Layout, only Container (which uses AdminLayout) */}
+      {ROLE_ROUTES.map(({ path, role }) => (
+        <Route key={path} element={<PrivateRoute role={role} />}>
+          <Route
+            path={path}
+            element={<Container role={user?.role} name={user?.name} />}
+          />
+        </Route>
+      ))}
+      {/* Catch all route */}
+      {/* <Route path="*" element={<Navigate replace to="/home" />} /> */}
+    </Routes>
   );
 }
 

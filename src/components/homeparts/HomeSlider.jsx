@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const defaultSlides = [
-  {
-    title: 'Innovate with Us',
-    description: 'Empowering your business with cutting-edge digital solutions.',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    title: 'Web & Mobile Development',
-    description: 'Custom applications tailored to your needs.',
-    image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    title: 'Cyber Security',
-    description: 'Protect your business with our security solutions.',
-    image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80',
-  },
+  {
+    title: 'Innovate with Us',
+    description: 'Empowering your business with cutting-edge digital solutions.',
+    image: 'https://images.unsplash.com/photo-1573164713919-cb934e8b0a70?auto=format&fit=crop&q=80',
+  },
+  {
+    title: 'Web & Mobile Development',
+    description: 'Custom applications tailored to your needs.',
+    image: 'https://images.unsplash.com/photo-1549490349-86433620165b?auto=format&fit=crop&q=80',
+  },
+  {
+    title: 'Cyber Security',
+    description: 'Protect your business with our security solutions.',
+    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee9812?auto=format&fit=crop&q=80',
+  },
 ];
 
 const transitionVariants = {
@@ -32,7 +32,12 @@ const transitionVariants = {
   },
 };
 
-const HomeSlider = ({ slides = defaultSlides, transitionType = 'fade', autoPlay = true, autoPlayInterval = 5000 }) => {
+const HomeSlider = ({ 
+  slides = defaultSlides, 
+  transitionType = 'fade', 
+  autoPlay = true, 
+  autoPlayInterval = 5000 
+}) => {
   const [current, setCurrent] = useState(0);
   const [transition, setTransition] = useState(transitionType);
   
